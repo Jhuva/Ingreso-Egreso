@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ingreso-egreso-app-395cb": {
+      "hosting": {
+        "ingresoEgresoApp": [
+          "ingreso-egreso-app-395cb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ingreso-egreso-app-395cb"
+  }
+}
