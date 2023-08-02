@@ -24,6 +24,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { appReducers } from './app.reducer';
+import { OrdenIngresoPipe } from './pipes/orden-ingreso.pipe';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { appReducers } from './app.reducer';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    DetalleComponent
+    DetalleComponent,
+    OrdenIngresoPipe
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { appReducers } from './app.reducer';
     AngularFireAuthModule,
     AngularFirestoreModule,
     StoreModule.forRoot(appReducers),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    ChartsModule
   ],
   providers: [
     { provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig }
